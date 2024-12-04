@@ -6,7 +6,7 @@ namespace SutIuliaLab7
 {
     public partial class App : Application
     {
-        static ShoppingListDatabase database;
+        static ShoppingListDatabase database = null!;
         public static ShoppingListDatabase Database
         {
             get
