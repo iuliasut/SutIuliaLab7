@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite;
+using SQLiteNetExtensions.Attributes;
 namespace SutIuliaLab7.Models
 {
     public class ShopList
@@ -13,5 +14,9 @@ namespace SutIuliaLab7.Models
         [MaxLength(250), Unique]
         public string Description { get; set; } = string.Empty;
         public DateTime Date { get; set; }
+
+        [ForeignKey(typeof(Shop))]
+        public int? ShopID { get; set; }
+
     }
 }
